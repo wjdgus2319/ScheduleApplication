@@ -38,6 +38,8 @@ createdate DATETIME NOT NULL,
 updateddate DATETIME NOT NULL,
 username VARCHAR(20) NOT NULL
 );    
+
+
 2)Insert
 
 INSERT INTO schedules (
@@ -46,21 +48,29 @@ INSERT INTO schedules (
 "createdate": "now()",
 "updateddate": "now()"
 )
+
+
 3)Select
 
 SELECT *
 FROM schedules
 ORDER BY createdate DESC;
+
+
 4)Select
 
 SELECT *
 FROM schedules
 WHERE id='1';
+
+
 5)update
 
 UPDATE schedules
 SET title='LV0 과제 검토' --> 할일,작성자명만 수정
 WHERE title='LV0 과제 제출';
+
+
 6)delete 
 
 DELETE FROM users
