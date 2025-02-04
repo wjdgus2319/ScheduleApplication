@@ -26,3 +26,42 @@
 |---------|----------|-----------------|--------|-------------------|--------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|-----------------|
 | 완료    | schedule | 선택 일정 삭제  | DELETE | /schedules/{id}   | `password`: `3917`                                                                              | 없음                                                                                                                | 200(OK), 401(Unauthorized) |
 ![image](https://github.com/user-attachments/assets/55696321-4d5f-4737-afa6-e7c21ad9dea5)
+SQL쿼리 작성
+1) Create
+   	 
+CREATE schedules users (
+id INTEGER(30) NOT NULL,
+password VARCHAR(20) NOT NULL,  
+title VARCHAR(100) NOT NULL, 
+content VARCHAR(100) NOT NULL, 
+createdate DATETIME NOT NULL,
+updateddate DATETIME NOT NULL,
+username VARCHAR(20) NOT NULL
+);    
+2)Insert
+
+INSERT INTO schedules (
+"title": "LV0 과제 제출",
+"content": "API명세서 작성하여 검사 받기",
+"createdate": "now()",
+"updateddate": "now()"
+)
+3)Select
+
+SELECT *
+FROM schedules
+ORDER BY createdate DESC;
+4)Select
+
+SELECT *
+FROM schedules
+WHERE id='1';
+5)update
+
+UPDATE schedules
+SET title='LV0 과제 검토' --> 할일,작성자명만 수정
+WHERE title='LV0 과제 제출';
+6)delete 
+
+DELETE FROM users
+WHERE id = 1;
